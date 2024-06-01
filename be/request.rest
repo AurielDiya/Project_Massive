@@ -1,0 +1,30 @@
+GET http://localhost:5000/users
+Authorization: bearer 
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Samian Saja",
+    "email": "sams@gmail.com",
+    "password": "samian",
+    "confPassword": "samian",
+    "phone_number": "088805403414",
+    "img": "art.jpg",
+    "username": "samiansaja"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "phone_number": "088805403414",
+    "password": "123",
+}
+
+###
+GET http://localhost:5000/token
+
+###
+DELETE http://localhost:5000/logout
